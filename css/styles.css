@@ -104,12 +104,27 @@ h3 {
 
 
 /* Загальний контейнер для вирівнювання по центру */
+:root {
+    scroll-behavior: smooth;
+
+    --black: #121417;
+    --green: #4dc274;
+    --green-linear: linear-gradient(85deg, #4dc274 2.25%, #bee8cc 131.25%);
+    --light-green: #d4fde1;
+    --gray: #f3f5f6;
+    --white: #fff;
+    --green-accent: #bee8cc;
+}
+
+/* Загальний контейнер для вирівнювання по центру */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 1280px;
+    /* Максимальна ширина */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -122,6 +137,23 @@ h3 {
     line-height: 1.125;
     font-family: Manrope;
     letter-spacing: -0.02em;
+    position: relative;
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 39px;
+    height: 12px;
+    background-color: var(--green-accent);
+    border-radius: 8px 0px 0px 0px;
 }
 
 .about-description {
@@ -150,7 +182,8 @@ h3 {
 .card {
     width: 100%;
     max-width: 335px;
-    /* Максимальна ширина для мобільних */
+    height: 160px;
+    /* Фіксована висота карток */
     background-color: var(--gray);
     padding: 16px;
     border-radius: 16px;
@@ -185,7 +218,8 @@ h3 {
     justify-content: center;
     width: 100%;
     max-width: 335px;
-    height: auto;
+    height: 313px;
+    /* Висота для мобільних */
     margin-top: 16px;
     background-color: var(--green);
     border-radius: 30px;
@@ -212,11 +246,14 @@ h3 {
 
     .card {
         width: 336px;
+        height: 160px;
     }
 
     .memoji-container {
         width: 100%;
         max-width: 100%;
+        height: 243px;
+        /* Висота для планшетів */
         margin-top: 0;
     }
 }
@@ -244,6 +281,7 @@ h3 {
 
     .card {
         width: 325px;
+        height: 160px;
     }
 
     .memoji-container {
