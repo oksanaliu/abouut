@@ -125,6 +125,7 @@ h3 {
     height: 12px;
     background-color: var(--green-accent);
     border-radius: 8px;
+    z-index: -1;
 }
 
 .about-description {
