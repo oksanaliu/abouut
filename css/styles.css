@@ -149,6 +149,7 @@ h3 {
 .card {
     width: auto;
     background-color: var(--gray);
+    max-width: 335px;
     padding: 16px;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -161,6 +162,8 @@ h3 {
 }
 
 .card-number {
+    text-align: center;
+
     font-size: 28px;
     font-family: Manrope;
     color: var(--green);
@@ -171,6 +174,8 @@ h3 {
 }
 
 .card-description {
+    text-align: center;
+    transform: translateX(-50%);
     font-size: 20px;
     line-height: 1.5;
     font-family: Manrope;
@@ -271,7 +276,6 @@ h3 {
 
         width: auto;
         height: 352px;
-        margin-left: 32px;
-
+        margin-left: 16px;
     }
 }
