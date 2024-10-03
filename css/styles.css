@@ -266,11 +266,11 @@ h3 {
 
     }
 
-    .cards-and-memoji {
+    /* .cards-and-memoji {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-    }
+    } */
 
     .memoji-container {
         margin-left: 16px;
