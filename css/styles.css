@@ -118,7 +118,7 @@ h2::after {
     text-align: left;
     margin-bottom: 16px;
     /* Розміщує текст ближче до низу */
-    padding-left: 64px;
+    left: 16px;
     /* Відступ тексту від номера */
 }
 
