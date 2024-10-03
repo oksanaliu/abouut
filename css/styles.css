@@ -1,59 +1,3 @@
-body {
-    color: var(--black);
-    font-family: 'Manrope', sans-serif;
-    background-color: var(--white);
-}
-
-h1 {
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.053;
-    text-align: center;
-    /* Центруємо заголовок */
-}
-
-@media (min-width: 768px) {
-    h1 {
-        font-size: 60px;
-        line-height: 1.167;
-    }
-}
-
-h2 {
-    text-align: center;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.125;
-    letter-spacing: -0.64px;
-    position: relative;
-    /* Для позиціювання псевдоелемента */
-    display: inline-block;
-}
-
-@media (min-width: 768px) {
-    h2 {
-        font-size: 40px;
-        line-height: 1.2;
-        letter-spacing: -0.8px;
-    }
-}
-
-h2::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    /* Підкреслення має займати всю ширину слова */
-    height: 12px;
-    background-color: var(--green-accent);
-    border-radius: 8px;
-    z-index: -1;
-}
-
 .about-title {
     text-align: center;
     font-size: 32px;
@@ -64,9 +8,26 @@ h2::after {
     position: relative;
 }
 
+.highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 12px;
+    background-color: var(--green-accent);
+    border-radius: 8px;
+    z-index: -1;
+}
+
 .about-description {
     font-family: Manrope;
-    text-align: center;
     font-size: 14px;
     line-height: 1.5;
     color: #12141780;
@@ -75,7 +36,7 @@ h2::after {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    /* Вирівнюємо опис по центру */
+    text-align: center;
 }
 
 .cards {
@@ -83,22 +44,24 @@ h2::after {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
+
 }
 
 .card {
-    width: 100%;
+    width: auto;
     background-color: var(--gray);
     padding: 16px;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     height: 160px;
-    position: relative;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
     text-align: left;
+    position: relative;
+
+    width: 100%;
 }
+
 
 .card-number {
     font-size: 28px;
@@ -112,32 +75,125 @@ h2::after {
 
 .card-description {
     font-size: 20px;
-    font-weight: 700;
     line-height: 1.5;
+    margin-top: 16px;
     font-family: Manrope;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     text-align: left;
-    margin-bottom: 16px;
-    /* Розміщує текст ближче до низу */
     left: 16px;
-    /* Відступ тексту від номера */
+    margin-bottom: 16px;
+
+
 }
+
 
 .memoji-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 335px;
     height: 313px;
     margin-top: 16px;
     background-color: var(--green);
     border-radius: 30px;
+
 }
 
 .memoji-image {
-    width: 100%;
-    height: auto;
-    border-radius: 30px;
+    width: 254px;
+    height: 211px;
+    border-radius: 999px 0px 0px 0px;
 }
+
+
+@media only screen and (min-width: 768px) {
+
+    .card {
+        width: calc(50% - 16px);
+    }
+
+    .about-title {
+        font-size: 40px;
+    }
+
+    .about-description {
+        font-size: 18px;
+        margin-bottom: 64px;
+
+    }
+
+    .cards {
+        gap: 32px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .memoji-container {
+        height: 243px;
+        margin-top: 16px;
+    }
+
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+
+    .about-title {
+        font-size: 40px;
+    }
+
+    .about-description {
+        font-size: 18px;
+        margin-bottom: 64px;
+
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .card {
+        width: 100%;
+        height: 160px;
+    }
+
+    .cards-and-memoji {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .memoji-container {
+        width: 310px;
+        height: 352px;
+        margin-left: 32px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    color: var(--black);
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--white);
+} */
+
+
+/* 
 
 @media only screen and (min-width: 768px) {
     .cards {
@@ -149,12 +205,12 @@ h2::after {
         width: 100%;
         height: auto;
         margin-top: 16px;
-    }
-
+    } */
+/* 
     .card {
         width: 100%;
-        /* На планшетах картки по центру */
-    }
+        /На планшетах картки по центру */
+/* }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -163,21 +219,21 @@ h2::after {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
         width: 70%;
-        /* Розмір контейнера для карток */
-        margin-right: auto;
+        / Розмір контейнера для карток */
+/* margin-right: auto;
     }
 
     .card {
         width: 100%;
-    }
+    } */
 
-    .memoji-container {
+/* .memoji-container {
         width: 30%;
-        /* Емоджі займає ліву частину */
-        height: auto;
+        / Емоджі займає ліву частину */
+/* height: auto;
         margin-right: 32px;
-        /* Додаємо відступ між емоджі і картками */
-        float: left;
-        /* Емоджі вирівняне зліва */
-    }
-}
+        / Додаємо відступ між емоджі і картками */
+/* float: left;
+        / Емоджі вирівняне зліва */
+/* }
+}  
