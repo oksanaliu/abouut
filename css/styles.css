@@ -9,6 +9,8 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: 1.053;
+    text-align: center;
+    /* Центруємо заголовок */
 }
 
 @media (min-width: 768px) {
@@ -25,6 +27,9 @@ h2 {
     font-weight: 700;
     line-height: 1.125;
     letter-spacing: -0.64px;
+    position: relative;
+    /* Для позиціювання псевдоелемента */
+    display: inline-block;
 }
 
 @media (min-width: 768px) {
@@ -35,61 +40,18 @@ h2 {
     }
 }
 
-h3 {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.4px;
-}
-
-.visually-hidden {
+h2::after {
+    content: "";
     position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    overflow: hidden;
-}
-
-.no-scroll {
-    overflow: hidden;
-}
-
-:root {
-    scroll-behavior: smooth;
-    --black: #121417;
-    --green: #4dc274;
-    --green-linear: linear-gradient(85deg, #4dc274 2.25%, #bee8cc 131.25%);
-    --light-green: #d4fde1;
-    --gray: #f3f5f6;
-    --white: #fff;
-    --green-accent: #bee8cc;
-}
-
-.container {
-    min-width: 320px;
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-@media only screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-        padding: 0 32px;
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-        padding: 0 64px;
-    }
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    /* Підкреслення має займати всю ширину слова */
+    height: 12px;
+    background-color: var(--green-accent);
+    border-radius: 8px;
+    z-index: -1;
 }
 
 .about-title {
@@ -102,23 +64,6 @@ h3 {
     position: relative;
 }
 
-.highlight {
-    position: relative;
-    display: inline-block;
-}
-
-.highlight::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 39px;
-    height: 12px;
-    background-color: var(--green-accent);
-    border-radius: 8px;
-    z-index: -1;
-}
-
 .about-description {
     font-family: Manrope;
     text-align: center;
@@ -127,6 +72,10 @@ h3 {
     color: #12141780;
     margin-top: 16px;
     margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Вирівнюємо опис по центру */
 }
 
 .cards {
@@ -213,7 +162,9 @@ h3 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
-        width: 100%;
+        width: 70%;
+        /* Розмір контейнера для карток */
+        margin-right: auto;
     }
 
     .card {
@@ -221,8 +172,12 @@ h3 {
     }
 
     .memoji-container {
-        margin-left: 16px;
-        flex-basis: 100%;
-        /* Займає всю ширину на планшетах */
+        width: 30%;
+        /* Емоджі займає ліву частину */
+        height: auto;
+        margin-right: 32px;
+        /* Додаємо відступ між емоджі і картками */
+        float: left;
+        /* Емоджі вирівняне зліва */
     }
 }
