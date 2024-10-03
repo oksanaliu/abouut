@@ -109,12 +109,12 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 320px;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* Центруємо заголовок і опис */
 .about-title {
     text-align: center;
     font-size: 32px;
@@ -122,7 +122,6 @@ h3 {
     line-height: 1.125;
     font-family: Manrope;
     letter-spacing: -0.02em;
-    position: relative;
 }
 
 .about-description {
@@ -133,36 +132,33 @@ h3 {
     margin-top: 16px;
     margin-bottom: 40px;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
 }
 
+/* Вирівнювання карток по центру */
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
+    /* Вирівнювання карток по центру */
+    gap: 20px;
     width: 100%;
-    justify-content: center;
 }
 
 .card {
     width: 100%;
     max-width: 335px;
-    /* Максимальна ширина картки */
+    /* Максимальна ширина для мобільних */
     background-color: var(--gray);
     padding: 16px;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    height: auto;
-    /* Замість фіксованої висоти */
     display: flex;
     flex-direction: column;
+    /* Вирівнювання всередині картки */
     align-items: flex-start;
     text-align: left;
     position: relative;
-    justify-content: space-between;
 }
 
 .card-number {
@@ -182,23 +178,18 @@ h3 {
     letter-spacing: -0.02em;
 }
 
+/* Контейнер для емоджі */
 .memoji-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 335px;
+    /* Максимальна ширина для мобільних */
     height: auto;
-    /* Динамічна висота */
     margin-top: 16px;
     background-color: var(--green);
     border-radius: 30px;
-}
-
-.memoji-image {
-    width: 254px;
-    height: 211px;
-    border-radius: 999px 0px 0px 0px;
 }
 
 /* Стилі для планшетів */
@@ -213,6 +204,7 @@ h3 {
         flex-wrap: wrap;
         justify-content: center;
         /* Центруємо картки */
+        gap: 32px;
     }
 
     .card {
@@ -220,11 +212,12 @@ h3 {
         /* Картки по дві в ряд */
         max-width: 336px;
         /* Максимальна ширина для планшетів */
+        margin-bottom: 16px;
     }
 
     .memoji-container {
         width: 100%;
-        height: auto;
+        max-width: 100%;
         margin-top: 32px;
     }
 }
@@ -247,8 +240,12 @@ h3 {
     .card {
         width: 325px;
         /* Фіксована ширина для десктопів */
-        height: auto;
-        /* Висота адаптується під контент */
+    }
+
+    .memoji-container {
+        width: 310px;
+        height: 352px;
+        margin-left: 32px;
     }
 
     .cards-and-memoji {
@@ -256,11 +253,5 @@ h3 {
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-    }
-
-    .memoji-container {
-        width: 310px;
-        height: 352px;
-        margin-left: 32px;
     }
 }
