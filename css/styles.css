@@ -194,21 +194,21 @@ h3 {
         padding: 0 64px;
     }
 
+    /* Контейнер для карток і емоджі на десктопі */
     .cards-and-memoji {
         display: flex;
-        justify-content: flex-start;
-        /* Емоджі і картки на одному рівні */
+        justify-content: space-between;
+        /* Розташовуємо картки та емоджі на одному рівні */
         align-items: flex-start;
-        gap: 36px;
-        /* Відстань між картками та емоджі 36px */
+        width: 100%;
     }
 
     .cards-all {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         gap: 36px;
-        /* Відстань між картками 36px */
-        justify-items: center;
+        /* Відстань між картками */
     }
 
     .card {
@@ -219,7 +219,7 @@ h3 {
     .memoji-container {
         width: 310px;
         height: calc(160px * 2 + 36px);
-        /* Висота емоджі */
+        /* Висота емоджі дорівнює двом карткам + відстань між ними */
         margin-left: 36px;
         /* Відстань між картками та емоджі */
     }
