@@ -202,9 +202,9 @@ h3 {
     font-family: Manrope;
     color: var(--green);
     font-weight: 700;
-    margin-top: 16px;
+    margin-top: 8px;
     /* Відступ згори */
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .card-description {
