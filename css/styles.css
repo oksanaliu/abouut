@@ -148,7 +148,7 @@ h3 {
 }
 
 .card {
-    width: auto;
+    width: 100%;
     background-color: var(--gray);
     max-width: 335px;
     padding: 16px;
@@ -226,7 +226,6 @@ h3 {
 
     .cards {
         gap: 32px;
-        width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
