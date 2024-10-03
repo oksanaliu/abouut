@@ -226,6 +226,7 @@ h3 {
 
     .cards {
         gap: 32px;
+        width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
