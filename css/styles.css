@@ -101,6 +101,8 @@ h3 {
     }
 }
 
+
+
 .about-title {
     text-align: center;
     font-size: 32px;
@@ -147,12 +149,11 @@ h3 {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    /* align-items: center; */
-
+    align-items: center;
 }
 
 .card {
-    width: auto;
+    width: 100%;
     background-color: var(--gray);
     padding: 16px;
     border-radius: 16px;
@@ -161,10 +162,7 @@ h3 {
     display: flex;
     text-align: left;
     position: relative;
-
-    width: 100%;
 }
-
 
 .card-number {
     font-size: 28px;
@@ -184,12 +182,10 @@ h3 {
     font-weight: 700;
     letter-spacing: -0.02em;
     text-align: left;
-    left: 16px;
     margin-bottom: 16px;
-
-
+    padding-left: 16px;
+    /* Відстань між номером і текстом */
 }
-
 
 .memoji-container {
     display: flex;
@@ -201,7 +197,6 @@ h3 {
     margin-top: 16px;
     background-color: var(--green);
     border-radius: 30px;
-
 }
 
 .memoji-image {
@@ -210,9 +205,8 @@ h3 {
     border-radius: 999px 0px 0px 0px;
 }
 
-
+/* Styles for Tablet */
 @media only screen and (min-width: 768px) {
-
     .card {
         width: calc(50% - 16px);
     }
@@ -224,7 +218,6 @@ h3 {
     .about-description {
         font-size: 18px;
         margin-bottom: 64px;
-
     }
 
     .cards {
@@ -235,16 +228,14 @@ h3 {
     }
 
     .memoji-container {
-        height: 243px;
-        margin-top: 16px;
+        width: 100%;
+        height: auto;
+        margin-top: 32px;
     }
-
-
 }
 
+/* Styles for Desktop */
 @media only screen and (min-width: 1280px) {
-
-
     .about-title {
         font-size: 40px;
     }
@@ -252,7 +243,6 @@ h3 {
     .about-description {
         font-size: 18px;
         margin-bottom: 64px;
-
     }
 
     .cards {
@@ -276,5 +266,7 @@ h3 {
         width: 310px;
         height: 352px;
         margin-left: 32px;
+        float: right;
+        /* Емоджі праворуч від карток */
     }
 }
