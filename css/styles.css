@@ -178,6 +178,8 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 335px;
+    height: 313px;
     margin-top: 16px;
     background-color: var(--green);
     border-radius: 30px;
