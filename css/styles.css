@@ -178,6 +178,23 @@ h3 {
     letter-spacing: -0.02em;
 }
 
+.card-number {
+    font-size: 28px;
+    font-family: Manrope;
+    color: var(--green);
+    font-weight: 700;
+    margin-bottom: 16px;
+    /* Відступ між номером і текстом */
+}
+
+.card-description {
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: Manrope;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
 /* Контейнер для емоджі */
 .memoji-container {
     display: flex;
