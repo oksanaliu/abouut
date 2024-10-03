@@ -175,7 +175,7 @@ h3 {
 .cards {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 32px;
     width: 100%;
     justify-items: center;
     align-items: start;
@@ -202,6 +202,8 @@ h3 {
     font-family: Manrope;
     color: var(--green);
     font-weight: 700;
+    margin-top: 16px;
+    /* Відступ згори */
     margin-bottom: 16px;
 }
 
@@ -222,7 +224,7 @@ h3 {
     max-width: 335px;
     height: 313px;
     /* Висота для мобільних */
-    margin-top: 16px;
+    margin-top: 32px;
     background-color: var(--green);
     border-radius: 30px;
 }
@@ -236,14 +238,18 @@ h3 {
 
     .cards-and-memoji {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
+        gap: 32px;
+        /* Відступ між картками та емоджі */
     }
 
     .cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
+        justify-items: center;
     }
 
     .card {
@@ -256,7 +262,7 @@ h3 {
         max-width: 100%;
         height: 243px;
         /* Висота для планшетів */
-        margin-top: 0;
+        margin-top: 32px;
     }
 }
 
