@@ -153,11 +153,11 @@ h3 {
     padding: 16px;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    height: 160px;
+    height: auto;
     position: relative;
 
     display: flex;
-    text-align: left;
+    align-items: center;
     justify-content: flex-start;
 }
 
