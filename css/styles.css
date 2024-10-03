@@ -109,12 +109,12 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    min-width: 320px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Центруємо заголовок і опис */
 .about-title {
     text-align: center;
     font-size: 32px;
@@ -122,6 +122,9 @@ h3 {
     line-height: 1.125;
     font-family: Manrope;
     letter-spacing: -0.02em;
+    position: relative;
+    margin-bottom: 20px;
+    /* Відступ від заголовка до наступного елементу */
 }
 
 .about-description {
@@ -133,32 +136,35 @@ h3 {
     margin-bottom: 40px;
     max-width: 600px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Вирівнювання карток по центру */
 .cards {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* Вирівнювання карток по центру */
     gap: 20px;
+    align-items: center;
     width: 100%;
+    justify-content: center;
 }
 
 .card {
     width: 100%;
     max-width: 335px;
-    /* Максимальна ширина для мобільних */
+    /* Максимальна ширина картки */
     background-color: var(--gray);
     padding: 16px;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
     display: flex;
     flex-direction: column;
-    /* Вирівнювання всередині картки */
-    align-items: flex-start;
     text-align: left;
     position: relative;
+    justify-content: flex-start;
+    /* Вирівнюємо елементи всередині картки */
+    align-items: flex-start;
 }
 
 .card-number {
@@ -167,7 +173,7 @@ h3 {
     color: var(--green);
     font-weight: 700;
     margin-bottom: 16px;
-    /* Відступ між номером і текстом */
+    /* Відступ між номером і описом */
 }
 
 .card-description {
@@ -176,20 +182,26 @@ h3 {
     font-family: Manrope;
     font-weight: 700;
     letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    /* Рівномірний відступ знизу */
 }
 
-/* Контейнер для емоджі */
 .memoji-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 335px;
-    /* Максимальна ширина для мобільних */
     height: auto;
     margin-top: 16px;
     background-color: var(--green);
     border-radius: 30px;
+}
+
+.memoji-image {
+    width: 254px;
+    height: 211px;
+    border-radius: 999px 0px 0px 0px;
 }
 
 /* Стилі для планшетів */
@@ -202,9 +214,9 @@ h3 {
     .cards {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 32px;
         justify-content: center;
         /* Центруємо картки */
-        gap: 32px;
     }
 
     .card {
@@ -212,13 +224,18 @@ h3 {
         /* Картки по дві в ряд */
         max-width: 336px;
         /* Максимальна ширина для планшетів */
-        margin-bottom: 16px;
     }
 
     .memoji-container {
         width: 100%;
-        max-width: 100%;
+        height: 300px;
+        /* Встановлюємо висоту для мемоджі на планшетах */
         margin-top: 32px;
+    }
+
+    .memoji-image {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -240,12 +257,7 @@ h3 {
     .card {
         width: 325px;
         /* Фіксована ширина для десктопів */
-    }
-
-    .memoji-container {
-        width: 310px;
-        height: 352px;
-        margin-left: 32px;
+        height: auto;
     }
 
     .cards-and-memoji {
@@ -253,5 +265,11 @@ h3 {
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
+    }
+
+    .memoji-container {
+        width: 310px;
+        height: 352px;
+        margin-left: 32px;
     }
 }
