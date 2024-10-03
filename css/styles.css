@@ -9,14 +9,12 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: 1.053;
-    /* 105.263% */
 }
 
 @media (min-width: 768px) {
     h1 {
         font-size: 60px;
         line-height: 1.167;
-        /* 116.667% */
     }
 }
 
@@ -26,7 +24,6 @@ h2 {
     font-style: normal;
     font-weight: 700;
     line-height: 1.125;
-    /* 112.5% */
     letter-spacing: -0.64px;
 }
 
@@ -34,7 +31,6 @@ h2 {
     h2 {
         font-size: 40px;
         line-height: 1.2;
-        /* 120% */
         letter-spacing: -0.8px;
     }
 }
@@ -44,7 +40,6 @@ h3 {
     font-style: normal;
     font-weight: 700;
     line-height: 1.2;
-    /* 120% */
     letter-spacing: -0.4px;
 }
 
@@ -89,12 +84,13 @@ h3 {
     justify-content: center;
 }
 
-/* Загальний контейнер для вирівнювання по центру */
-.about .container {
+/* Центрування карток у контейнері */
+.cards-all {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 /* Центруємо заголовок і опис */
@@ -160,9 +156,11 @@ h3 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
     text-align: left;
     position: relative;
+    padding-bottom: 16px;
 }
 
 .card-number {
@@ -171,7 +169,6 @@ h3 {
     color: var(--green);
     font-weight: 700;
     margin-top: 16px;
-    margin-bottom: 16px;
 }
 
 .card-description {
@@ -213,7 +210,8 @@ h3 {
 
     .cards {
         grid-template-columns: repeat(2, 1fr);
-        gap: 36px;
+        gap: 24px;
+        /* Зменшено відстань між картками */
         justify-items: center;
     }
 
@@ -242,12 +240,15 @@ h3 {
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        gap: 36px;
+        gap: 24px;
+        /* Зменшено відстань для правильного вирівнювання емоджі */
     }
 
-    .cards {
+    .cards-all {
+        position: relative;
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 36px;
+        gap: 24px;
         justify-items: center;
     }
 
@@ -257,10 +258,12 @@ h3 {
     }
 
     .memoji-container {
+        position: absolute;
+        right: -340px;
+        /* Відносне позиціювання праворуч від карток */
+        top: 0;
         width: 310px;
-        height: calc(160px * 2 + 36px);
-        /* Висота емоджі дорівнює двом карткам + відстань */
-        margin-left: 18px;
-        /* Відступ між картками та емоджі */
+        height: calc(160px * 2 + 24px);
+        /* Висота емоджі */
     }
 }
