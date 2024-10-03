@@ -272,7 +272,7 @@ h3 {
     }
 
     .memoji-container {
-        flex-grow: 1;
+        margin-left: 16px;
         flex-basis: 31%;
         height: 352px;
     }
