@@ -148,12 +148,14 @@ h3 {
 .highlight::after {
     content: "";
     position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 39px;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     height: 12px;
     background-color: var(--green-accent);
-    border-radius: 8px 0px 0px 0px;
+    border-radius: 8px;
+    z-index: -1;
 }
 
 .about-description {
