@@ -83,49 +83,10 @@ h3 {
     max-width: 375px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-/* Styles for Tablet devices */
-@media only screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-        padding: 0 32px;
-    }
-}
-
-/* Styles for Desktop devices */
-@media only screen and (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-        padding: 0 64px;
-    }
-}
-
-
-
-/* Загальний контейнер для вирівнювання по центру */
-:root {
-    scroll-behavior: smooth;
-
-    --black: #121417;
-    --green: #4dc274;
-    --green-linear: linear-gradient(85deg, #4dc274 2.25%, #bee8cc 131.25%);
-    --light-green: #d4fde1;
-    --gray: #f3f5f6;
-    --white: #fff;
-    --green-accent: #bee8cc;
-}
-
-:root {
-    scroll-behavior: smooth;
-
-    --black: #121417;
-    --green: #4dc274;
-    --green-linear: linear-gradient(85deg, #4dc274 2.25%, #bee8cc 131.25%);
-    --light-green: #d4fde1;
-    --gray: #f3f5f6;
-    --white: #fff;
-    --green-accent: #bee8cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Загальний контейнер для вирівнювання по центру */
@@ -134,7 +95,6 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 /* Центруємо заголовок і опис */
@@ -183,11 +143,11 @@ h3 {
 .cards {
     display: grid;
     grid-template-columns: 1fr;
-    /* Відстань між картками */
+    gap: 20px;
+    /* Відстань між картками для мобільної версії */
     width: 100%;
     justify-items: center;
     align-items: start;
-    gap: 20px;
 }
 
 .card {
@@ -203,7 +163,6 @@ h3 {
     align-items: center;
     text-align: left;
     position: relative;
-
 }
 
 .card-number {
@@ -222,7 +181,6 @@ h3 {
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 16px;
-
 }
 
 /* Контейнер для емоджі */
@@ -256,7 +214,6 @@ h3 {
     .cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 36px;
-        /* Відстань між картками */
         justify-items: center;
     }
 
@@ -285,13 +242,12 @@ h3 {
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        gap: 32px;
+        gap: 36px;
     }
 
     .cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 36px;
-        /* Відстань між картками */
         justify-items: center;
     }
 
@@ -303,7 +259,7 @@ h3 {
     .memoji-container {
         width: 310px;
         height: calc(160px * 2 + 36px);
-        /* Висота емоджі дорівнює висоті двох карток + відстань */
+        /* Висота емоджі дорівнює двом карткам + відстань */
         margin-left: 18px;
         /* Відступ між картками та емоджі */
     }
