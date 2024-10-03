@@ -73,6 +73,8 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    position: relative;
+    /* Для позиціонування емоджі */
 }
 
 .about-title {
@@ -142,12 +144,14 @@ h3 {
 
 /* Контейнер для емоджі */
 .memoji-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 335px;
-    height: 313px;
+    position: absolute;
+    /* Абсолютне позиціонування */
+    right: -340px;
+    /* Задаємо відступ від карток */
+    top: 0;
+    width: 310px;
+    height: calc(160px * 2 + 36px);
+    /* Висота емоджі */
     background-color: var(--green);
     border-radius: 30px;
 }
@@ -184,6 +188,8 @@ h3 {
         max-width: 100%;
         height: 243px;
         margin-top: 32px;
+        position: static;
+        /* Видаляємо абсолютне позиціювання на планшетах */
     }
 }
 
@@ -197,10 +203,10 @@ h3 {
     /* Контейнер для карток і емоджі на десктопі */
     .cards-and-memoji {
         display: flex;
-        justify-content: space-between;
-        /* Розташовуємо картки та емоджі на одному рівні */
+        justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
+        position: relative;
     }
 
     .cards-all {
@@ -209,6 +215,7 @@ h3 {
         justify-content: flex-start;
         gap: 36px;
         /* Відстань між картками */
+        position: relative;
     }
 
     .card {
@@ -217,9 +224,14 @@ h3 {
     }
 
     .memoji-container {
+        position: absolute;
+        /* Позиціонування емоджі */
+        right: -350px;
+        /* Позиціонування від карток */
+        top: 0;
         width: 310px;
         height: calc(160px * 2 + 36px);
-        /* Висота емоджі дорівнює двом карткам + відстань між ними */
+        /* Висота емоджі */
         margin-left: 36px;
         /* Відстань між картками та емоджі */
     }
