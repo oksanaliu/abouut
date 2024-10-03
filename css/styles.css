@@ -155,6 +155,8 @@ h3 {
     height: 160px;
     display: flex;
     text-align: left;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .card-number {
@@ -162,6 +164,7 @@ h3 {
     font-family: Manrope;
     color: var(--green);
     font-weight: 700;
+    margin-bottom: 16px;
 }
 
 .card-description {
