@@ -258,10 +258,7 @@ h3 {
     }
 
     .memoji-container {
-        position: absolute;
-        right: -340px;
         /* Відносне позиціювання праворуч від карток */
-        top: 0;
         width: 310px;
         height: calc(160px * 2 + 24px);
         /* Висота емоджі */
