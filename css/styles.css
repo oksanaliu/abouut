@@ -230,53 +230,50 @@ h3 {
 
 /* Стилі для десктопів */
 @media only screen and (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-        padding: 0 64px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        /* Центрування по вертикалі */
-        position: relative;
-        /* Для абсолютного позиціювання емоджі */
-    }
+    @media only screen and (min-width: 1280px) {
+        .container {
+            max-width: 1280px;
+            padding: 0 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Центрування по вертикалі */
+            flex-direction: row;
+            /* Розміщення елементів в один ряд */
+        }
 
-    .cards-and-memoji {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        position: relative;
-        width: 100%;
-        gap: 36px;
-        /* Відстань між картками та емоджі */
-    }
+        .cards-and-memoji {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            gap: 36px;
+            /* Відстань між картками та емоджі */
+        }
 
-    .cards-all {
-        position: relative;
-        /* Контейнер для карток з відносним позиціонуванням */
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        justify-items: center;
-    }
+        .cards-all {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            justify-items: center;
+        }
 
-    .card {
-        width: 325px;
-        height: 160px;
-    }
+        .card {
+            width: 325px;
+            height: 160px;
+        }
 
-    .memoji-container {
-        position: absolute;
-        /* Абсолютне позиціювання */
-        right: -350px;
-        /* Відступ емоджі праворуч від карток */
-        top: 0;
-        width: 310px;
-        height: calc(160px * 2 + 24px);
-        /* Висота емоджі дорівнює висоті двох карток плюс відстань */
-        background-color: var(--green);
-        border-radius: 30px;
+        .memoji-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 310px;
+            height: calc(160px * 2 + 24px);
+            /* Висота емоджі дорівнює висоті двох карток плюс відстань */
+            background-color: var(--green);
+            border-radius: 30px;
+        }
     }
 
 }
