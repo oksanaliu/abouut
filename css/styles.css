@@ -240,7 +240,7 @@ h3 {
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        row-gap: 24px;
+        row-gap: 20px;
         /* Зменшено відстань для правильного вирівнювання емоджі */
     }
 
@@ -258,6 +258,7 @@ h3 {
     }
 
     .memoji-container {
+
         /* Відносне позиціювання праворуч від карток */
         width: 310px;
         height: calc(160px * 2 + 24px);
