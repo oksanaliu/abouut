@@ -230,50 +230,65 @@ h3 {
 
 /* Стилі для десктопів */
 @media only screen and (min-width: 1280px) {
-    @media only screen and (min-width: 1280px) {
-        .container {
-            max-width: 1280px;
-            padding: 0 64px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            /* Центрування по вертикалі */
-            flex-direction: row;
-            /* Розміщення елементів в один ряд */
-        }
-
-        .cards-and-memoji {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 100%;
-            gap: 36px;
-            /* Відстань між картками та емоджі */
-        }
-
-        .cards-all {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            justify-items: center;
-        }
-
-        .card {
-            width: 325px;
-            height: 160px;
-        }
-
-        .memoji-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 310px;
-            height: calc(160px * 2 + 24px);
-            /* Висота емоджі дорівнює висоті двох карток плюс відстань */
-            background-color: var(--green);
-            border-radius: 30px;
-        }
+    .container {
+        max-width: 1280px;
+        padding: 0 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        /* Центрування по вертикалі */
+        flex-direction: row;
+        /* Розміщення елементів в один ряд */
     }
 
+    .cards-and-memoji {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* Вирівнюємо елементи по верху */
+        width: 100%;
+        gap: 36px;
+        /* Відстань між картками та емоджі */
+    }
+
+    .cards-all {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+        /* Відстань між картками */
+        justify-items: center;
+        flex-shrink: 0;
+        /* Фіксуємо розмір карток */
+    }
+
+    .card {
+        width: 325px;
+        height: 160px;
+    }
+
+    .memoji-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 310px;
+        height: calc(160px * 2 + 36px);
+        /* Висота емоджі дорівнює висоті двох карток плюс відстань */
+        background-color: var(--green);
+        border-radius: 30px;
+        flex-shrink: 0;
+        /* Запобігає зміні розміру контейнера */
+        position: relative;
+        /* Дозволяє емоджі залишатися праворуч від карток */
+        top: 0;
+        /* Вирівнюємо емоджі по верху */
+    }
+
+    .memoji-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: inherit;
+        /* Для збереження округлості емоджі */
+    }
 }
