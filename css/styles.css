@@ -292,32 +292,23 @@ h3 {
     .container {
         max-width: 1280px;
         padding: 0 64px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        /* Вирівнювання по верхньому краю */
-        gap: 36px;
-        /* Відстань між картками та емоджі */
     }
 
     .cards-and-memoji {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 36px;
-        /* Відстань між картками та емоджі */
         width: 100%;
-        max-width: 100%;
-        /* Ширина для правильного розташування елементів */
+        gap: 24px;
+        /* Зменшено відстань для правильного вирівнювання емоджі */
     }
 
     .cards-all {
+        position: relative;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 36px;
-        /* Відстань між картками */
+        gap: 24px;
         justify-items: center;
-        flex-shrink: 0;
     }
 
     .card {
@@ -326,23 +317,9 @@ h3 {
     }
 
     .memoji-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        /* Відносне позиціювання праворуч від карток */
         width: 310px;
-        height: calc(160px * 2 + 36px);
-        /* Висота емоджі дорівнює висоті двох карток плюс відстань */
-        background-color: var(--green);
-        border-radius: 30px;
-        margin-top: 0;
-        /* Забезпечує вирівнювання з картками по верхньому краю */
-        flex-shrink: 0;
-    }
-
-    .memoji-container img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        border-radius: inherit;
+        height: calc(160px * 2 + 24px);
+        /* Висота емоджі */
     }
 }
