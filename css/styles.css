@@ -292,6 +292,10 @@ h3 {
     .container {
         max-width: 1280px;
         padding: 0 64px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 36px;
     }
 
     .cards-and-memoji {
@@ -299,15 +303,13 @@ h3 {
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        gap: 24px;
-        /* Зменшено відстань для правильного вирівнювання емоджі */
+        gap: 36px;
     }
 
     .cards-all {
-        position: relative;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
+        gap: 36px;
         justify-items: center;
     }
 
@@ -317,9 +319,12 @@ h3 {
     }
 
     .memoji-container {
-        /* Відносне позиціювання праворуч від карток */
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 310px;
-        height: calc(160px * 2 + 24px);
-        /* Висота емоджі */
+        height: calc(160px * 2 + 36px);
+        background-color: var(--green);
+        border-radius: 30px;
     }
 }
