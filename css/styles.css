@@ -304,7 +304,7 @@ h3 {
     }
 
     .cards {
-        с display: grid;
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
     }
@@ -327,3 +327,4 @@ h3 {
         height: 352px;
         margin-left: 16px;
     }
+}
